@@ -6,21 +6,21 @@ const categories = [
     name: 'Category A – Political Leaders and Activists',
     description: 'Showcasing distinguished personalities who fought battles to liberate Black people from the shackles of slavery and colonialism.',
     items: ['Freedom Fighters', 'Pan African Leaders', 'Civil Rights Leaders', 'Royal Warriors'],
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://i.ibb.co/JW7whnHr/Black-Royal-Heroes-2.jpg',
     imageHint: 'political leader speech'
   },
   {
     name: 'Category B – Cultural Icons and Innovators',
     description: 'Showcasing distinguished personalities who made history and promoted Black image in global events and development.',
     items: ['Black Leaders', 'Great Icons', 'Political Leaders', 'International Figures'],
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://i.ibb.co/FkVdRGqh/Black-Royal-Heroes-3.jpg',
     imageHint: 'cultural icon artist'
   },
   {
     name: 'Category C – Community Champions',
     description: 'Showcasing distinguished personalities making history in international events, sports, entertainment, humanity, and development.',
     items: ['Great Superstars', 'Legends', 'Trailblazers', 'Change Makers', 'Black Achievers'],
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://i.ibb.co/v4NDpcgk/Black-Royal-Heroes-4.jpg',
     imageHint: 'community champion award'
   },
 ]
