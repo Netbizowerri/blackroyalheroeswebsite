@@ -1,4 +1,5 @@
 import { Crown, Facebook, Instagram, Linkedin, Mail, Phone, Twitter } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -19,14 +20,22 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-foreground mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-primary transition-colors">About Event</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Black Events</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Program</a></li>
-              <li><a href="/register" className="hover:text-primary transition-colors">Nominate</a></li>
-              <li><a href="/register" className="hover:text-primary transition-colors">Register</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Gallery</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">FAQ</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Contact</a></li>
+              <li><Link href="/about" className="hover:text-primary transition-colors">About Event</Link></li>
+              <li><Link href="/events" className="hover:text-primary transition-colors">Black Events</Link></li>
+              <li><Link href="/program" className="hover:text-primary transition-colors">Program</Link></li>
+              <li><Link href="/nominate" className="hover:text-primary transition-colors">Nominate</Link></li>
+              <li><Link href="/register" className="hover:text-primary transition-colors">Register</Link></li>
+              <li><Link href="/gallery" className="hover:text-primary transition-colors">Gallery</Link></li>
+              <li><Link href="/faq" className="hover:text-primary transition-colors">FAQ</Link></li>
+              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-bold text-foreground mb-4">Legal</h4>
+            <ul className="space-y-2">
+              <li><Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:text-primary transition-colors">Terms</Link></li>
+              <li><Link href="/disclaimer" className="hover:text-primary transition-colors">Disclaimer</Link></li>
             </ul>
           </div>
           <div>
