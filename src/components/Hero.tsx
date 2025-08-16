@@ -14,7 +14,6 @@ export default function Hero() {
           data-ai-hint="historical event celebration"
           priority
         />
-        <div className="absolute inset-0 bg-black/60" />
       </div>
       <div className="relative z-10 p-4">
         <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 tracking-wide text-primary">

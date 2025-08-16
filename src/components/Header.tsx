@@ -18,25 +18,24 @@ export default function Header() {
   return (
     <header className="py-4 border-b border-border sticky top-0 bg-background/80 backdrop-blur-sm z-50">
       <div className="container mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-3">
           <Image
-            src="https://blackroyalheroes.com/wp-content/uploads/2024/04/Black-Royal-Heroes-Logo.png"
+            src="https://i.ibb.co/Kp6g2pDR/Black-Royal-Hero-1.jpg"
             alt="Black Royal Heroes Logo"
             width={50}
             height={50}
             className="rounded-full"
           />
           <div className="hidden sm:block">
-            <h1 className="text-xl font-bold font-headline tracking-tight group-hover:text-primary transition-colors">
-              Black Royal Heroes
+            <h1 className="text-xl font-bold font-headline tracking-tight text-primary transition-colors">
+              BLACK ROYAL HEROES
             </h1>
-            <p className="text-xs text-muted-foreground">Celebrating 200 Years of Distinguished Black Excellence</p>
           </div>
         </Link>
         
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="text-sm font-medium hover:text-primary transition-colors">
+            <Link key={link.href} href={link.href} className="text-sm font-medium text-primary hover:text-foreground transition-colors">
               {link.label}
             </Link>
           ))}
@@ -54,21 +53,21 @@ export default function Header() {
               <div className="flex flex-col gap-4 p-4">
                 <Link href="/" className="flex items-center gap-2 mb-4">
                   <Image
-                    src="https://blackroyalheroes.com/wp-content/uploads/2024/04/Black-Royal-Heroes-Logo.png"
+                    src="https://i.ibb.co/Kp6g2pDR/Black-Royal-Hero-1.jpg"
                     alt="Black Royal Heroes Logo"
                     width={40}
                     height={40}
                     className="rounded-full"
                   />
                   <div>
-                    <h1 className="text-lg font-bold font-headline">
-                      Black Royal Heroes
+                    <h1 className="text-lg font-bold font-headline text-primary">
+                      BLACK ROYAL HEROES
                     </h1>
                   </div>
                 </Link>
                 <nav className="flex flex-col gap-4">
                   {navLinks.map((link) => (
-                    <Link key={link.href} href={link.href} className="text-lg font-medium hover:text-primary transition-colors">
+                    <Link key={link.href} href={link.href} className="text-lg font-medium text-primary hover:text-foreground transition-colors">
                       {link.label}
                     </Link>
                   ))}
