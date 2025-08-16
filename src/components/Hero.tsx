@@ -5,17 +5,15 @@ import Image from 'next/image';
 export default function Hero() {
   return (
     <section className="relative text-center my-12 md:my-20 h-[60vh] flex items-center justify-center rounded-lg overflow-hidden">
-      <div className="absolute inset-0">
-        <Image
-          src="https://i.ibb.co/vfVqrC4/Black-Royal-Heroes-1.jpg"
-          alt="Black Royal Heroes Event"
-          fill
-          className="object-cover"
-          data-ai-hint="historical event celebration"
-          priority
-        />
-      </div>
-      <div className="relative z-10 p-4">
+      <Image
+        src="https://i.ibb.co/vfVqrC4/Black-Royal-Heroes-1.jpg"
+        alt="Black Royal Heroes Event"
+        fill
+        className="object-cover"
+        data-ai-hint="historical event celebration"
+        priority
+      />
+      <div className="relative z-10 p-4 bg-black/50 rounded-lg">
         <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 tracking-wide text-primary">
           BLACK ROYAL HEROES HALL OF FAME 2026
         </h1>
