@@ -1,5 +1,6 @@
-import { Crown, Facebook, Instagram, Linkedin, Mail, Phone, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail, Phone, Twitter } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -8,7 +9,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="flex items-center mb-2">
-              <Crown className="w-8 h-8 mr-2 text-primary" />
+              <Image
+                src="https://i.ibb.co/Kp6g2pDR/Black-Royal-Hero-1.jpg"
+                alt="Black Royal Heroes Logo"
+                width={40}
+                height={40}
+                className="rounded-full mr-3"
+              />
               <h3 className="text-xl font-bold font-headline text-foreground">
                 Black Royal Heroes
               </h3>
