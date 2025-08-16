@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Black Royal Heroes Hall of Fame 2026',
   description: 'Celebrating 200 years of distinguished Black heroes & great personalities in world history.',
   icons: {
-    icon: 'https://i.ibb.co/VW33spJv/Black-Royal-Event.jpg',
+    icon: 'https://blackroyalheroes.com/wp-content/uploads/2024/04/cropped-Black-Royal-Event.jpg',
   },
 };
 
