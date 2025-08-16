@@ -13,7 +13,7 @@ export default function Hero() {
         data-ai-hint="historical event celebration"
         priority
       />
-      <div className="relative z-10 p-4 bg-black/50 rounded-lg">
+      <div className="relative z-10 p-4">
         <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 tracking-wide text-primary">
           BLACK ROYAL HEROES HALL OF FAME 2026
         </h1>
