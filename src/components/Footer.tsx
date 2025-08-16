@@ -8,24 +8,20 @@ export default function Footer() {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="flex items-center mb-2">
-              <Image
-                src="https://i.ibb.co/Kp6g2pDR/Black-Royal-Hero-1.jpg"
-                alt="Black Royal Heroes Logo"
-                width={40}
-                height={40}
-                className="rounded-full mr-3"
-              />
-              <h3 className="text-xl font-bold font-headline text-foreground">
-                Black Royal Heroes
-              </h3>
-            </div>
+            <h4 className="font-bold text-primary mb-4">Black Royal Heroes</h4>
+            <Image
+              src="https://i.ibb.co/Kp6g2pDR/Black-Royal-Hero-1.jpg"
+              alt="Black Royal Heroes Logo"
+              width={80}
+              height={80}
+              className="rounded-full mb-3"
+            />
             <p className="text-sm max-w-xs">
               Celebrating 200 Years of Distinguished Black Excellence
             </p>
           </div>
           <div>
-            <h4 className="font-bold text-foreground mb-4">Quick Links</h4>
+            <h4 className="font-bold text-primary mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li><Link href="/about" className="hover:text-primary transition-colors">About Event</Link></li>
               <li><Link href="/events" className="hover:text-primary transition-colors">Black Events</Link></li>
@@ -38,7 +34,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-foreground mb-4">Legal</h4>
+            <h4 className="font-bold text-primary mb-4">Legal</h4>
             <ul className="space-y-2">
               <li><Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-primary transition-colors">Terms</Link></li>
@@ -46,7 +42,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-foreground mb-4">Contact Info</h4>
+            <h4 className="font-bold text-primary mb-4">Contact Info</h4>
             <ul className="space-y-2">
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-primary" />
@@ -58,10 +54,10 @@ export default function Footer() {
               </li>
             </ul>
             <div className="flex space-x-4 mt-4">
-              <a href="#" aria-label="Facebook" className="hover:text-primary transition-colors"><Facebook /></a>
-              <a href="#" aria-label="Instagram" className="hover:text-primary transition-colors"><Instagram /></a>
-              <a href="#" aria-label="Twitter" className="hover:text-primary transition-colors"><Twitter /></a>
-              <a href="#" aria-label="LinkedIn" className="hover:text-primary transition-colors"><Linkedin /></a>
+              <a href="#" aria-label="Facebook" className="text-primary hover:text-foreground transition-colors"><Facebook /></a>
+              <a href="#" aria-label="Instagram" className="text-primary hover:text-foreground transition-colors"><Instagram /></a>
+              <a href="#" aria-label="Twitter" className="text-primary hover:text-foreground transition-colors"><Twitter /></a>
+              <a href="#" aria-label="LinkedIn" className="text-primary hover:text-foreground transition-colors"><Linkedin /></a>
             </div>
           </div>
         </div>
