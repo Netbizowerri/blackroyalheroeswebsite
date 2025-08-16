@@ -1,20 +1,27 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import Image from "next/image";
 
 const categories = [
   {
     name: 'Category A – Political Leaders and Activists',
     description: 'Showcasing distinguished personalities who fought battles to liberate Black people from the shackles of slavery and colonialism.',
-    items: ['Freedom Fighters', 'Pan African Leaders', 'Civil Rights Leaders', 'Royal Warriors']
+    items: ['Freedom Fighters', 'Pan African Leaders', 'Civil Rights Leaders', 'Royal Warriors'],
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'political leader speech'
   },
   {
     name: 'Category B – Cultural Icons and Innovators',
     description: 'Showcasing distinguished personalities who made history and promoted Black image in global events and development.',
-    items: ['Black Leaders', 'Great Icons', 'Political Leaders', 'International Figures']
+    items: ['Black Leaders', 'Great Icons', 'Political Leaders', 'International Figures'],
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'cultural icon artist'
   },
   {
     name: 'Category C – Community Champions',
     description: 'Showcasing distinguished personalities making history in international events, sports, entertainment, humanity, and development.',
-    items: ['Great Superstars', 'Legends', 'Trailblazers', 'Change Makers', 'Black Achievers']
+    items: ['Great Superstars', 'Legends', 'Trailblazers', 'Change Makers', 'Black Achievers'],
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'community champion award'
   },
 ]
 
@@ -32,9 +39,18 @@ export default function Categories() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {categories.map(category => (
-            <Card key={category.name} className="flex flex-col">
+            <Card key={category.name} className="flex flex-col overflow-hidden">
+                <div className="relative h-48 w-full">
+                    <Image 
+                        src={category.imageUrl}
+                        alt={category.name}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={category.imageHint}
+                    />
+                </div>
               <CardHeader>
-                <CardTitle className="font-headline text-2xl">{category.name}</CardTitle>
+                <CardTitle className="font-headline text-xl text-primary">{category.name}</CardTitle>
                 <CardDescription>{category.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">

@@ -16,18 +16,18 @@ const navLinks = [
 
 export default function Header() {
   return (
-    <header className="py-4 border-b border-border sticky top-0 bg-background/80 backdrop-blur-sm z-50">
+    <header className="py-4 border-b border-border/20 absolute top-0 w-full z-50">
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="https://i.ibb.co/Kp6g2pDR/Black-Royal-Hero-1.jpg"
             alt="Black Royal Heroes Logo"
-            width={50}
-            height={50}
+            width={60}
+            height={60}
             className="rounded-full"
           />
           <div className="hidden sm:block">
-            <h1 className="text-xl font-bold font-headline tracking-tight text-primary transition-colors">
+            <h1 className="text-lg font-bold font-headline tracking-tight text-primary transition-colors">
               BLACK ROYAL HEROES
             </h1>
           </div>
@@ -44,7 +44,7 @@ export default function Header() {
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="text-primary hover:text-foreground">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>
