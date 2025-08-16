@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="relative h-[70vh] flex items-center justify-center text-center">
+    <section className="relative h-screen flex items-center justify-center text-center">
       <div className="absolute inset-0 w-full h-full">
         <Image
           src="https://i.ibb.co/vfVqrC4/Black-Royal-Heroes-1.jpg"
