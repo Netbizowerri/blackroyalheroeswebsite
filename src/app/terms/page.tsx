@@ -19,7 +19,7 @@ export default function TermsPage() {
                 />
                 <div className="absolute inset-0 bg-black/60"></div>
             </div>
-            <div className="relative z-10 p-4">
+            <div className="relative z-10 p-4 pt-24">
                 <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 tracking-wide text-primary">
                 Terms and Conditions
                 </h1>
@@ -44,7 +44,7 @@ export default function TermsPage() {
                 <p>Refund requests will only be considered if submitted in writing before the promotional deadline of August 30th, 2026. No refunds will be issued after this date. Approved refunds will be processed within 14 working days. Tickets are transferable to another individual provided written notice is given before the deadline.</p>
 
                 <h2 className="text-2xl font-bold font-headline text-foreground pt-4">3. Event Conduct</h2>
-                <p>We reserve the right to refuse entry to or remove any person from the event for any reason, including but not limited to, behavior that is disruptive, disrespectful, or dangerous. All attendees must comply with all applicable laws and venue rules.</p>
+                <p>We reserve the right to refuse entry to or remove any person from the event for any reason, including but not to, behavior that is disruptive, disrespectful, or dangerous. All attendees must comply with all applicable laws and venue rules.</p>
                 
                 <h2 className="text-2xl font-bold font-headline text-foreground pt-4">4. Intellectual Property</h2>
                 <p>The Service and its original content, features, and functionality are and will remain the exclusive property of Black Royal Heroes Hall of Fame and its licensors. The content on this website, including text, graphics, logos, and images, is protected by copyright and other intellectual property laws.</p>
