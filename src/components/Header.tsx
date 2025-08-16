@@ -55,8 +55,8 @@ export default function Header() {
                   <Image
                     src="https://i.ibb.co/Kp6g2pDR/Black-Royal-Hero-1.jpg"
                     alt="Black Royal Heroes Logo"
-                    width={40}
-                    height={40}
+                    width={50}
+                    height={50}
                     className="rounded-full"
                   />
                   <div>

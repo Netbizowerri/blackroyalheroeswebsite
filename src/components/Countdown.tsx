@@ -61,8 +61,8 @@ export default function Countdown() {
             />
             <div className="absolute inset-0 bg-background/80"></div>
         </div>
-        <div className="relative z-10">
-            <div className="grid grid-flow-col gap-5 text-center auto-cols-max justify-center mb-8">
+        <div className="relative z-10 px-4">
+            <div className="grid grid-cols-2 sm:grid-flow-col gap-5 text-center auto-cols-max justify-center mb-8">
                 {timerComponents.map(([interval, value]) => (
                     <Card key={interval} className="p-4 bg-secondary">
                         <CardContent className="p-2">
