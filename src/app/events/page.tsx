@@ -41,41 +41,58 @@ export default function EventsPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow container mx-auto px-4 py-8 pt-24 md:pt-32">
-        <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4 text-primary">Black Events Schedule</h1>
-            <p className="text-lg max-w-3xl mx-auto text-muted-foreground">
-                Join us for three days of celebration, recognition, and cultural immersion.
-            </p>
-        </div>
-
-        <div className="space-y-12">
-          {eventSchedule.map((event, index) => (
-            <Card key={index} className="overflow-hidden md:grid md:grid-cols-5 md:gap-8 items-center">
-              <div className="md:col-span-2 relative h-64 md:h-full w-full">
+      <main className="flex-grow">
+        <section className="relative h-[50vh] flex items-center justify-center text-center">
+            <div className="absolute inset-0 w-full h-full">
                 <Image
-                    src={event.imageUrl}
-                    alt={event.title}
-                    fill
-                    className="object-cover"
-                    data-ai-hint={event.imageHint}
+                src="https://i.ibb.co/vfVqrC4/Black-Royal-Heroes-1.jpg"
+                alt="Black Royal Heroes Event"
+                fill
+                className="object-cover"
+                data-ai-hint="historical event celebration"
+                priority
                 />
-              </div>
-              <div className="md:col-span-3">
-                <CardHeader>
-                  <CardDescription className="text-primary font-semibold">{event.day} - {event.date}</CardDescription>
-                  <CardTitle className="font-headline text-3xl">{event.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3 text-muted-foreground mb-4">
-                    <p className="flex items-center gap-2"><Clock className="w-5 h-5 text-primary" /> {event.time}</p>
-                    <p className="flex items-center gap-2"><MapPin className="w-5 h-5 text-primary" /> {event.location}</p>
+                <div className="absolute inset-0 bg-black/60"></div>
+            </div>
+            <div className="relative z-10 p-4">
+                <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 tracking-wide text-primary">
+                Black Events Schedule
+                </h1>
+                <p className="text-lg md:text-xl max-w-4xl mx-auto text-slate-200">
+                    Join us for three days of celebration, recognition, and cultural immersion.
+                </p>
+            </div>
+        </section>
+
+        <div className="container mx-auto px-4 py-16">
+            <div className="space-y-12">
+              {eventSchedule.map((event, index) => (
+                <Card key={index} className="overflow-hidden md:grid md:grid-cols-5 md:gap-8 items-center">
+                  <div className="md:col-span-2 relative h-64 md:h-full w-full">
+                    <Image
+                        src={event.imageUrl}
+                        alt={event.title}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={event.imageHint}
+                    />
                   </div>
-                  <p>{event.description}</p>
-                </CardContent>
-              </div>
-            </Card>
-          ))}
+                  <div className="md:col-span-3">
+                    <CardHeader>
+                      <CardDescription className="text-primary font-semibold">{event.day} - {event.date}</CardDescription>
+                      <CardTitle className="font-headline text-3xl">{event.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3 text-muted-foreground mb-4">
+                        <p className="flex items-center gap-2"><Clock className="w-5 h-5 text-primary" /> {event.time}</p>
+                        <p className="flex items-center gap-2"><MapPin className="w-5 h-5 text-primary" /> {event.location}</p>
+                      </div>
+                      <p>{event.description}</p>
+                    </CardContent>
+                  </div>
+                </Card>
+              ))}
+            </div>
         </div>
       </main>
       <Footer />

@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import Image from 'next/image';
 
 const faqs = [
     {
@@ -42,25 +43,42 @@ export default function FAQPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow container mx-auto px-4 py-8 pt-24 md:pt-32">
-        <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4 text-primary">Frequently Asked Questions</h1>
-            <p className="text-lg max-w-3xl mx-auto text-muted-foreground">
-                Find answers to common questions about the event.
-            </p>
-        </div>
+      <main className="flex-grow">
+        <section className="relative h-[50vh] flex items-center justify-center text-center">
+            <div className="absolute inset-0 w-full h-full">
+                <Image
+                src="https://i.ibb.co/vfVqrC4/Black-Royal-Heroes-1.jpg"
+                alt="Black Royal Heroes Event"
+                fill
+                className="object-cover"
+                data-ai-hint="historical event celebration"
+                priority
+                />
+                <div className="absolute inset-0 bg-black/60"></div>
+            </div>
+            <div className="relative z-10 p-4">
+                <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 tracking-wide text-primary">
+                Frequently Asked Questions
+                </h1>
+                <p className="text-lg md:text-xl max-w-4xl mx-auto text-slate-200">
+                    Find answers to common questions about the event.
+                </p>
+            </div>
+        </section>
 
-        <div className="max-w-4xl mx-auto">
-            <Accordion type="single" collapsible className="w-full">
-                {faqs.map((faq, index) => (
-                    <AccordionItem key={index} value={`item-${index}`}>
-                        <AccordionTrigger className="text-left font-bold">{faq.question}</AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground">
-                            {faq.answer}
-                        </AccordionContent>
-                    </AccordionItem>
-                ))}
-            </Accordion>
+        <div className="container mx-auto px-4 py-16">
+            <div className="max-w-4xl mx-auto">
+                <Accordion type="single" collapsible className="w-full">
+                    {faqs.map((faq, index) => (
+                        <AccordionItem key={index} value={`item-${index}`}>
+                            <AccordionTrigger className="text-left font-bold">{faq.question}</AccordionTrigger>
+                            <AccordionContent className="text-muted-foreground">
+                                {faq.answer}
+                            </AccordionContent>
+                        </AccordionItem>
+                    ))}
+                </Accordion>
+            </div>
         </div>
       </main>
       <Footer />

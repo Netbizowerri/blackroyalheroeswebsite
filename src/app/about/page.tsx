@@ -20,7 +20,7 @@ export default function AboutPage() {
                 />
                 <div className="absolute inset-0 bg-black/60"></div>
             </div>
-            <div className="relative z-10 p-4">
+            <div className="relative z-10 p-4 pt-12">
                 <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 tracking-wide text-primary">
                 About The Event
                 </h1>

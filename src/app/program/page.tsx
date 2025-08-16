@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CheckCircle } from 'lucide-react';
+import Image from 'next/image';
 
 const programDetails = {
     day1: [
@@ -43,36 +44,53 @@ export default function ProgramPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow container mx-auto px-4 py-8 pt-24 md:pt-32">
-        <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4 text-primary">Event Program</h1>
-            <p className="text-lg max-w-3xl mx-auto text-muted-foreground">
-                Detailed schedule for the Black Royal Heroes Hall of Fame 2026.
-            </p>
-        </div>
+      <main className="flex-grow">
+        <section className="relative h-[50vh] flex items-center justify-center text-center">
+            <div className="absolute inset-0 w-full h-full">
+                <Image
+                src="https://i.ibb.co/vfVqrC4/Black-Royal-Heroes-1.jpg"
+                alt="Black Royal Heroes Event"
+                fill
+                className="object-cover"
+                data-ai-hint="historical event celebration"
+                priority
+                />
+                <div className="absolute inset-0 bg-black/60"></div>
+            </div>
+            <div className="relative z-10 p-4">
+                <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 tracking-wide text-primary">
+                Event Program
+                </h1>
+                <p className="text-lg md:text-xl max-w-4xl mx-auto text-slate-200">
+                    Detailed schedule for the Black Royal Heroes Hall of Fame 2026.
+                </p>
+            </div>
+        </section>
         
-        <Tabs defaultValue="day1" className="w-full max-w-4xl mx-auto">
-          <TabsList className="grid w-full grid-cols-3">
-            <TabsTrigger value="day1">Day 1: Gala Night</TabsTrigger>
-            <TabsTrigger value="day2">Day 2: Showcase</TabsTrigger>
-            <TabsTrigger value="day3">Day 3: Awards</TabsTrigger>
-          </TabsList>
-          <TabsContent value="day1">
-            <ul className="divide-y divide-border">
-                {programDetails.day1.map(item => <ProgramItem key={item.activity} {...item} />)}
-            </ul>
-          </TabsContent>
-          <TabsContent value="day2">
-            <ul className="divide-y divide-border">
-                {programDetails.day2.map(item => <ProgramItem key={item.activity} {...item} />)}
-            </ul>
-          </TabsContent>
-          <TabsContent value="day3">
-             <ul className="divide-y divide-border">
-                {programDetails.day3.map(item => <ProgramItem key={item.activity} {...item} />)}
-            </ul>
-          </TabsContent>
-        </Tabs>
+        <div className="container mx-auto px-4 py-16">
+            <Tabs defaultValue="day1" className="w-full max-w-4xl mx-auto">
+              <TabsList className="grid w-full grid-cols-3">
+                <TabsTrigger value="day1">Day 1: Gala Night</TabsTrigger>
+                <TabsTrigger value="day2">Day 2: Showcase</TabsTrigger>
+                <TabsTrigger value="day3">Day 3: Awards</TabsTrigger>
+              </TabsList>
+              <TabsContent value="day1">
+                <ul className="divide-y divide-border">
+                    {programDetails.day1.map(item => <ProgramItem key={item.activity} {...item} />)}
+                </ul>
+              </TabsContent>
+              <TabsContent value="day2">
+                <ul className="divide-y divide-border">
+                    {programDetails.day2.map(item => <ProgramItem key={item.activity} {...item} />)}
+                </ul>
+              </TabsContent>
+              <TabsContent value="day3">
+                 <ul className="divide-y divide-border">
+                    {programDetails.day3.map(item => <ProgramItem key={item.activity} {...item} />)}
+                </ul>
+              </TabsContent>
+            </Tabs>
+        </div>
       </main>
       <Footer />
     </div>
