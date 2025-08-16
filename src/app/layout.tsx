@@ -3,8 +3,11 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Black Royal Heroes Tribute',
-  description: 'A tribute to significant figures and events in Black history.',
+  title: 'Black Royal Heroes Hall of Fame 2026',
+  description: 'Celebrating 200 years of distinguished Black heroes & great personalities in world history.',
+  icons: {
+    icon: 'https://i.ibb.co/VW33spJv/Black-Royal-Event.jpg',
+  },
 };
 
 export default function RootLayout({

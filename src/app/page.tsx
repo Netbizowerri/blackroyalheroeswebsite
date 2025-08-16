@@ -1,6 +1,8 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import ProfileGrid from '@/components/ProfileGrid';
+import InfoSections from '@/components/InfoSections';
+import Categories from '@/components/Categories';
+import Countdown from '@/components/Countdown';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -9,7 +11,9 @@ export default function Home() {
       <Header />
       <main className="flex-grow container mx-auto px-4 py-8">
         <Hero />
-        <ProfileGrid />
+        <InfoSections />
+        <Categories />
+        <Countdown />
       </main>
       <Footer />
     </div>
