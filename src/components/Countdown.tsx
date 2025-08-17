@@ -73,18 +73,18 @@ export default function Countdown() {
                 ))}
             </div>
             
-            <Button asChild size="lg" className="mb-4">
+            <Button asChild className="mb-4">
                 <Link href="/register">Nominate Your Hero Today</Link>
             </Button>
             <p className="max-w-2xl mx-auto text-foreground/80">
                 Join the historic moment. Nominate a Hero who shaped Black excellence in the past 200 years. From Pan-African fighters to global change-makers, this is our time to honor their legacy.
             </p>
             <p className="mt-4 font-bold text-primary">
-            ⏰ Deadline for Nominations & Payments: 30th August 2026
+             Deadline for Nominations & Payments: 30th August 2026
             </p>
 
             <div className="mt-8 flex justify-center gap-4">
-                <Button asChild size="lg" variant="default">
+                <Button asChild size="default" variant="default">
                     <Link href="/register">Nominate Now</Link>
                 </Button>
                 <Button asChild size="lg" variant="secondary">

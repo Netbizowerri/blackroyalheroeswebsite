@@ -22,9 +22,9 @@ export default function Header() {
           <Image
             src="https://i.ibb.co/Kp6g2pDR/Black-Royal-Hero-1.jpg"
             alt="Black Royal Heroes Logo"
-            width={60}
-            height={60}
-            className="rounded-full"
+            width={80}
+            height={80}
+            className="rounded-full w-16 h-16 sm:w-20 sm:h-20"
           />
           <div className="hidden sm:block">
             <h1 className="text-lg font-bold font-headline tracking-tight text-primary transition-colors">
@@ -55,8 +55,8 @@ export default function Header() {
                   <Image
                     src="https://i.ibb.co/Kp6g2pDR/Black-Royal-Hero-1.jpg"
                     alt="Black Royal Heroes Logo"
-                    width={50}
-                    height={50}
+                    width={80}
+                    height={80}
                     className="rounded-full"
                   />
                   <div>
