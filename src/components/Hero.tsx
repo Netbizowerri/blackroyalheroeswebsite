@@ -23,7 +23,7 @@ export default function Hero() {
         <p className="text-lg md:text-xl max-w-4xl mx-auto text-slate-200 leading-relaxed [text-shadow:_1px_1px_2px_rgb(0_0_0_/_50%)]">
           Celebrating 200 years of distinguished Black heroes & great personalities in world history for their significant contributions and remarkable achievements in global events and development (1826–2026).
         </p>
-        <div className="mt-8 flex justify-center gap-4">
+        <div className="mt-8 flex justify-center gap-4 px-4">
           <Button asChild size="lg">
               <Link href="/register">Nominate a Hero</Link>
           </Button>
