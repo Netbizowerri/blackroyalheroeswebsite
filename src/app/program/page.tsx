@@ -70,9 +70,9 @@ export default function ProgramPage() {
         <div className="container mx-auto px-4 py-16">
             <Tabs defaultValue="day1" className="w-full max-w-4xl mx-auto">
               <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="day1">Day 1: Gala Night</TabsTrigger>
-                <TabsTrigger value="day2">Day 2: Showcase</TabsTrigger>
-                <TabsTrigger value="day3">Day 3: Awards</TabsTrigger>
+                <TabsTrigger value="day1">Day 1</TabsTrigger>
+                <TabsTrigger value="day2">Day 2</TabsTrigger>
+                <TabsTrigger value="day3">Day 3</TabsTrigger>
               </TabsList>
               <TabsContent value="day1">
                 <ul className="divide-y divide-border">

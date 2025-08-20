@@ -32,8 +32,8 @@ export default function Header() {
           <Image
             src="https://i.ibb.co/Kp6g2pDR/Black-Royal-Hero-1.jpg"
             alt="Black Royal Heroes Logo"
-            width={80}
-            height={80}
+            width={90}
+            height={90}
             className="rounded-full w-16 h-16 sm:w-20 sm:h-20"
           />
           <div className="hidden sm:block">
@@ -59,7 +59,7 @@ export default function Header() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
+            <SheetContent side="right" className="w-full">
               <div className="flex flex-col gap-4 p-4">
                  {/* Logo and Title */}
                 <Link href="/" className="flex items-center gap-2 mb-4">
@@ -71,7 +71,7 @@ export default function Header() {
                     className="rounded-full"
                   />
                   <div>
-                    <h1 className="text-lg font-bold font-headline text-primary">
+                    <h1 className="text-base font-bold font-headline text-primary">
                       BLACK ROYAL HEROES
                     </h1> 
                   </div> 
