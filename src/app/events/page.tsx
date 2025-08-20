@@ -12,36 +12,48 @@ const historicMilestones = [
     title: "Freedom of Black Slaves & Black Emancipation",
     subtitle: "Freedom of Black Slaves & Black Emancipation",
     description: "The historic journey from slavery to freedom, marking the beginning of a new era for Black people worldwide.",
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "emancipation proclamation historical"
   },
   {
     date: "1950s-1980s",
     title: "Liberation of Black Nations & Political Independence",
     subtitle: "Liberation of Black Nations & Political Independence",
     description: "The wave of independence movements across Africa and the Caribbean, establishing sovereign Black nations.",
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "african independence celebration"
   },
   {
     date: "1994",
     title: "Freedom of South Africa & Election of Nelson Mandela",
     subtitle: "The 1st Black President of SA",
     description: "The end of apartheid and the historic election of Nelson Mandela as South Africa's first Black president.",
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "Nelson Mandela speech"
   },
   {
     date: "2008",
     title: "Election of Barack Obama",
     subtitle: "As the 1st Black President of US",
     description: "A historic moment when Barack Obama became the first Black president of the United States of America.",
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "Barack Obama inauguration"
   },
   {
     date: "2021",
     title: "Appointment of Ngozi Okonjo-Iweala",
     subtitle: "As the 1st Black Woman to head World Trade Organization WTO",
     description: "Breaking barriers in international trade leadership as the first Black woman to lead the WTO.",
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "Ngozi Okonjo-Iweala portrait"
   },
   {
     date: "1963",
     title: "Civil Rights Solidarity March",
     subtitle: "Martin Luther's Heroic Sacrifice",
     description: "The March on Washington and Dr. Martin Luther King Jr.'s ultimate sacrifice for civil rights and equality.",
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "Martin Luther King"
   }
 ];
 
@@ -113,7 +125,16 @@ export default function EventsPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {historicMilestones.map((milestone, index) => (
-                    <Card key={index} className="flex flex-col">
+                    <Card key={index} className="flex flex-col overflow-hidden">
+                        <div className="relative h-48 w-full">
+                            <Image
+                                src={milestone.imageUrl}
+                                alt={milestone.title}
+                                fill
+                                className="object-cover"
+                                data-ai-hint={milestone.imageHint}
+                            />
+                        </div>
                         <CardHeader>
                             <CardDescription className="font-bold text-primary">{milestone.date}</CardDescription>
                             <CardTitle className="font-headline text-2xl">{milestone.title}</CardTitle>
