@@ -12,7 +12,7 @@ const historicMilestones = [
     title: "Freedom of Black Slaves & Black Emancipation",
     subtitle: "Freedom of Black Slaves & Black Emancipation",
     description: "The historic journey from slavery to freedom, marking the beginning of a new era for Black people worldwide.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "https://i.ibb.co/4nhvtRrJ/Black-Hero-1.jpg",
     imageHint: "emancipation proclamation historical"
   },
   {
@@ -20,7 +20,7 @@ const historicMilestones = [
     title: "Liberation of Black Nations & Political Independence",
     subtitle: "Liberation of Black Nations & Political Independence",
     description: "The wave of independence movements across Africa and the Caribbean, establishing sovereign Black nations.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "https://i.ibb.co/0Rr5cYJ9/Black-Hero-2.jpg",
     imageHint: "african independence celebration"
   },
   {
@@ -28,7 +28,7 @@ const historicMilestones = [
     title: "Freedom of South Africa & Election of Nelson Mandela",
     subtitle: "The 1st Black President of SA",
     description: "The end of apartheid and the historic election of Nelson Mandela as South Africa's first Black president.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "https://i.ibb.co/cSJhNyG1/Freedom-of-South-Africa-Election-of-Nelson-Mandela.jpg",
     imageHint: "Nelson Mandela speech"
   },
   {
@@ -36,7 +36,7 @@ const historicMilestones = [
     title: "Election of Barack Obama",
     subtitle: "As the 1st Black President of US",
     description: "A historic moment when Barack Obama became the first Black president of the United States of America.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "https://i.ibb.co/SDdpf1yW/Black-Hero-4.jpg",
     imageHint: "Barack Obama inauguration"
   },
   {
@@ -44,7 +44,7 @@ const historicMilestones = [
     title: "Appointment of Ngozi Okonjo-Iweala",
     subtitle: "As the 1st Black Woman to head World Trade Organization WTO",
     description: "Breaking barriers in international trade leadership as the first Black woman to lead the WTO.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "https://i.ibb.co/93HBFxR7/Black-Hero-5.jpg",
     imageHint: "Ngozi Okonjo-Iweala portrait"
   },
   {
@@ -52,7 +52,7 @@ const historicMilestones = [
     title: "Civil Rights Solidarity March",
     subtitle: "Martin Luther's Heroic Sacrifice",
     description: "The March on Washington and Dr. Martin Luther King Jr.'s ultimate sacrifice for civil rights and equality.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "https://i.ibb.co/xtN0CCTJ/Civil-Rights-Solidarity-March.webp",
     imageHint: "Martin Luther King"
   }
 ];
