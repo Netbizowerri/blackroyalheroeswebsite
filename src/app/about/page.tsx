@@ -31,10 +31,30 @@ export default function AboutPage() {
         </section>
 
         <section className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center" data-ai-id="our-mission-section">
             <h2 className="text-3xl md:text-4xl font-bold font-headline mb-6">Our Mission</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <div className="text-lg text-muted-foreground leading-relaxed">
               The Black Royal Heroes Hall of Fame 2026 is a landmark event dedicated to celebrating 200 years of distinguished Black heroes and great personalities in world history. Our mission is to honor their significant contributions and remarkable achievements in global events and development from 1826 to 2026. We aim to inspire future generations by showcasing the incredible sacrifices, innovations, and leadership that have shaped Black history and redeemed the Black image across the globe.
+            </div>
+          </div>
+        </section>
+
+        <section className="container mx-auto px-4 pb-16">
+          <div className="max-w-4xl mx-auto p-8 bg-secondary/30 rounded-lg text-center" data-ai-id="organizers-section">
+            <h2 className="text-3xl font-bold font-headline mb-6 text-primary">
+              Black Royal Heroes Hall of Fame 2026
+            </h2>
+            <div className="text-lg text-muted-foreground">
+              Is Officially Organize by
+            </div>
+            <p className="text-2xl font-semibold mt-4 text-foreground">
+              Black Royal Promotion Ltd
+            </p>
+            <div className="text-lg text-muted-foreground mt-6">
+              In collaboration with
+            </div>
+            <p className="text-xl font-semibold mt-2 text-foreground">
+              BLACK HEROES HALL OF FAME COMMITTEE and Royal Agencies.
             </p>
           </div>
         </section>

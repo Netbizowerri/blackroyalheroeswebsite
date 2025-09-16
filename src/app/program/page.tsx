@@ -6,11 +6,10 @@ import Image from 'next/image';
 
 const programDetails = {
     day1: [
-        { time: "6:00 PM", activity: "Arrival & Red Carpet" },
-        { time: "7:00 PM", activity: "Welcome Address" },
-        { time: "7:30 PM", activity: "Opening Performances" },
-        { time: "8:30 PM", activity: "Gala Dinner" },
-        { time: "10:00 PM", activity: "Networking & Live Music" },
+        { time: "09:00 AM", activity: "Arrival & Registration" },
+        { time: "10:00 AM", activity: "Opening Remarks & Welcome Address" },
+        { time: "11:00 AM", activity: "Keynote Speech: The Legacy of Black Heroes" },
+        { time: "12:00 PM", activity: "Cultural Performance Showcase" },
     ],
     day2: [
         { time: "10:00 AM", activity: "Exhibition Halls Open" },
@@ -69,7 +68,7 @@ export default function ProgramPage() {
         
         <div className="container mx-auto px-4 py-16">
             <Tabs defaultValue="day1" className="w-full max-w-4xl mx-auto">
-              <TabsList className="grid w-full grid-cols-3">
+              <TabsList className="grid w-full grid-cols-3" data-ai-hint="program day selection tabs">
                 <TabsTrigger value="day1">Day 1</TabsTrigger>
                 <TabsTrigger value="day2">Day 2</TabsTrigger>
                 <TabsTrigger value="day3">Day 3</TabsTrigger>

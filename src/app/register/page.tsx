@@ -1,11 +1,18 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle } from 'lucide-react';
 import Image from 'next/image';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import CheckoutForm from '@/components/CheckoutForm';
 
-const seatingOptions = [
+export const seatingOptions = [
   {
     title: 'Royal Seats – Diamond Ticket',
     price: '$350.00',
@@ -63,7 +70,26 @@ const terms = [
     }
 ];
 
+export type SeatingOption = typeof seatingOptions[0];
+
 export default function RegisterPage() {
+  const [selectedTicket, setSelectedTicket] = useState<SeatingOption | null>(null);
+  const [animatingIndex, setAnimatingIndex] = useState<number | null>(null);
+  const [showThankYou, setShowThankYou] = useState(false);
+
+  const handleCheckoutSuccess = () => {
+    setSelectedTicket(null); // Close the checkout form dialog
+    setShowThankYou(true); // Open the thank you dialog
+  };
+
+  const handleSelectSeat = (option: SeatingOption, index: number) => {
+    setAnimatingIndex(index);
+    setTimeout(() => {
+      setSelectedTicket(option);
+      setAnimatingIndex(null);
+    }, 200); // Animation duration
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -104,7 +130,7 @@ export default function RegisterPage() {
             
             <section className="my-16">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {seatingOptions.map((option) => (
+                {seatingOptions.map((option, index) => (
                   <Card key={option.title} className="flex flex-col">
                     <CardHeader>
                       <div className="relative aspect-video w-full rounded-md overflow-hidden mb-4">
@@ -130,7 +156,14 @@ export default function RegisterPage() {
                       </ul>
                     </CardContent>
                     <CardFooter>
-                      <Button className="w-full" size="lg">Select Seat</Button>
+                      <Button
+                        className={`w-full transition-transform duration-200 ${
+                          animatingIndex === index ? 'scale-90' : ''
+                        }`}
+                        size="lg"
+                        onClick={() => handleSelectSeat(option, index)}>
+                          Select Seat
+                      </Button>
                     </CardFooter>
                   </Card>
                 ))}
@@ -149,6 +182,35 @@ export default function RegisterPage() {
                 </div>
             </section>
         </div>
+
+        <Dialog open={!!selectedTicket} onOpenChange={(isOpen) => !isOpen && setSelectedTicket(null)}>
+            <DialogContent className="sm:max-w-[425px]">
+                <DialogHeader>
+                    <DialogTitle>Secure Your Seat</DialogTitle>
+                </DialogHeader>
+                {selectedTicket && (
+                    <CheckoutForm ticket={selectedTicket} onCheckoutSuccess={handleCheckoutSuccess} />
+                )}
+            </DialogContent>
+        </Dialog>
+
+        {/* Thank You Dialog */}
+        <Dialog open={showThankYou} onOpenChange={setShowThankYou}>
+          <DialogContent className="sm:max-w-[425px]">
+            <DialogHeader>
+              <DialogTitle>Thank You!</DialogTitle>
+              <DialogDescription className="pt-4 text-muted-foreground">
+                Thank you for your booking! We have received your details. Please check your email shortly for payment instructions to finalize your seat reservation.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="grid grid-cols-2 gap-4 pt-4">
+              <Button asChild variant="outline">
+                <Link href="/">Homepage</Link>
+              </Button>
+              <Button asChild><Link href="/nominate">Nominate a Hero</Link></Button>
+            </div>
+          </DialogContent>
+        </Dialog>
 
       </main>
       <Footer />

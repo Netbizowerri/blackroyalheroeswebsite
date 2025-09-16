@@ -62,7 +62,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="text-center border-t border-border mt-8 pt-6">
-          <p className="text-sm">&copy; {new Date().getFullYear() + 2} Black Royal Heroes Hall of Fame. All rights reserved.</p>
+          <p className="text-sm">&copy; 2026 Black Royal Heroes Hall of Fame. All rights reserved.</p>
         </div>
       </div>
     </footer>

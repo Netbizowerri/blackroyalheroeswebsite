@@ -15,13 +15,13 @@ import {
 } from 'lucide-react';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/events', label: 'Black Events' },
-  { href: '/program', label: 'Program' },
-  { href: '/nominate', label: 'Nominate' },
-  { href: '/register', label: 'Register' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/', label: 'Home', icon: Home },
+  { href: '/about', label: 'About', icon: Info },
+  { href: '/events', label: 'Black Events', icon: CalendarDays },
+  { href: '/program', label: 'Program', icon: Sparkles },
+  { href: '/nominate', label: 'Nominate', icon: Award },
+  { href: '/register', label: 'Register', icon: UserPlus },
+  { href: '/contact', label: 'Contact', icon: Mail },
 ];
 
 export default function Header() {
@@ -79,39 +79,12 @@ export default function Header() {
                 </Link>
                  {/* Navigation Links */}
                 <nav className="flex flex-col gap-4">
-                  {navLinks.map((link) => {
-                     let IconComponent: LucideIcon | null = null;
-                     switch (link.label) {
-                       case 'Home':
-                         IconComponent = Home;
-                         break;
-                       case 'About':
-                         IconComponent = Info;
-                         break;
-                       case 'Black Events':
-                         IconComponent = CalendarDays;
-                         break;
-                       case 'Program':
-                         IconComponent = Sparkles;
-                         break;
-                       case 'Nominate':
-                         IconComponent = Award;
-                         break;
-                       case 'Register':
-                         IconComponent = UserPlus;
-                         break;
-                       case 'Contact':
-                         IconComponent = Mail;
-                         break;
-                       default:
-                         IconComponent = null; // No icon for unhandled cases
-                     }
-                    return (<Link key={link.href} href={link.href} className="flex items-center gap-3 text-lg font-medium text-primary hover:text-foreground transition-colors">
-                      {IconComponent && <IconComponent className="h-5 w-5" />}
+                  {navLinks.map((link) => (
+                    <Link key={link.href} href={link.href} className="flex items-center gap-3 text-lg font-medium text-primary hover:text-foreground transition-colors">
+                      <link.icon className="h-5 w-5" />
                       {link.label}
                     </Link>
-                  );
-                  })}
+                  ))}
                 </nav>
                  {/* Register Now Button */}
                  <div className="p-4"> {/* Added padding to the container holding the button */}

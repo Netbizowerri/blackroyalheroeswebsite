@@ -8,10 +8,9 @@ import Image from "next/image";
 
 export default function Countdown() {
   const calculateTimeLeft = () => {
-    // Note: This is a placeholder date. In a real app, this would come from a server.
     const difference = +new Date("2026-08-30") - +new Date();
-    let timeLeft = {};
-
+    let timeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    
     if (difference > 0) {
       timeLeft = {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
@@ -24,28 +23,18 @@ export default function Countdown() {
     return timeLeft;
   };
 
-  const [timeLeft, setTimeLeft] = useState({
-      days: 437,
-      hours: 16,
-      minutes: 5,
-      seconds: 57
-  });
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-        // This is a simplified countdown for display purposes. A real implementation would be more robust.
-        setTimeLeft(prev => {
-            let { days, hours, minutes, seconds } = prev;
-            seconds--;
-            if (seconds < 0) { seconds = 59; minutes--; }
-            if (minutes < 0) { minutes = 59; hours--; }
-            if (hours < 0) { hours = 23; days--; }
-            return { days, hours, minutes, seconds };
-        });
+    // Set the initial time on the client to avoid hydration mismatch
+    setTimeLeft(calculateTimeLeft());
+
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearTimeout(timer);
-  });
+    return () => clearInterval(timer);
+  }, []);
   
   const timerComponents = Object.entries(timeLeft);
 
