@@ -15,9 +15,6 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Black Royal Heroes Hall of Fame 2026",
   description: "Celebrating 200 years (1826-2026) of achievements by Black heroes and personalities who have made significant contributions to global history and development.",
-  icons: {
-    icon: "/favicon.png",
-  },
 };
 
 export default function RootLayout({
