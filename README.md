@@ -1,5 +1,1 @@
-# Firebase Studio
-
-This is a NextJS starter in Firebase Studio.
-
-To get started, take a look at src/app/page.tsx.
+The Black Royal Heroes Hall of Fame 2026 webapp is a Next.js project that showcases a landmark event dedicated to celebrating 200 years of distinguished Black heroes and great personalities in world history. Our mission is to honor their significant contributions and remarkable achievements in global events and development from 1826 to 2026. We aim to inspire future generations by showcasing the incredible sacrifices, innovations, and leadership that have shaped Black history and redeemed the Black image across the globe.
